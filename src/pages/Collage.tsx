@@ -16,35 +16,35 @@ interface LayoutConfig {
 
 const layouts: Record<LayoutType, LayoutConfig> = {
   "2x1": {
-    name: "横向两格",
+    name: "2 Horizontal",
     icon: <div className="grid grid-cols-2 gap-0.5 w-5 h-3"><div className="bg-current" /><div className="bg-current" /></div>,
     cells: 2,
     gridClass: "grid-cols-2",
     areas: ["1", "2"],
   },
   "2x2": {
-    name: "四宫格",
+    name: "2x2 Grid",
     icon: <Grid2X2 className="w-4 h-4" />,
     cells: 4,
     gridClass: "grid-cols-2",
     areas: ["1", "2", "3", "4"],
   },
   "3x3": {
-    name: "九宫格",
+    name: "3x3 Grid",
     icon: <Grid3X3 className="w-4 h-4" />,
     cells: 9,
     gridClass: "grid-cols-3",
     areas: ["1", "2", "3", "4", "5", "6", "7", "8", "9"],
   },
   "1+2": {
-    name: "左一右二",
+    name: "1 Left + 2",
     icon: <LayoutGrid className="w-4 h-4" />,
     cells: 3,
     gridClass: "grid-cols-2",
     areas: ["span-2", "1", "2"],
   },
   "2+1": {
-    name: "上二下一",
+    name: "2 Top + 1",
     icon: <div className="grid grid-cols-2 gap-0.5 w-5 h-4"><div className="bg-current" /><div className="bg-current" /><div className="col-span-2 bg-current" /></div>,
     cells: 3,
     gridClass: "grid-cols-2",
@@ -143,8 +143,8 @@ const Collage = () => {
       <main className="pt-28 pb-12 px-6">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12">
-            <h1 className="text-4xl font-bold mb-4 gradient-text">拼图</h1>
-            <p className="text-muted-foreground text-lg">选择布局，添加图片，创建精美拼图</p>
+            <h1 className="text-4xl font-bold mb-4 gradient-text">Collage</h1>
+            <p className="text-muted-foreground text-lg">Choose a layout, add images, and create stunning collages</p>
           </div>
 
           <div className="grid lg:grid-cols-3 gap-8">
@@ -204,7 +204,7 @@ const Collage = () => {
             <div className="space-y-6">
               {/* Layout Selection */}
               <div className="glass-card p-6">
-                <h3 className="text-lg font-semibold mb-4">选择布局</h3>
+                <h3 className="text-lg font-semibold mb-4">Select Layout</h3>
                 <div className="grid grid-cols-3 gap-3">
                   {(Object.entries(layouts) as [LayoutType, LayoutConfig][]).map(([key, config]) => (
                     <button
@@ -225,7 +225,7 @@ const Collage = () => {
 
               {/* Gap Control */}
               <div className="glass-card p-6">
-                <h3 className="text-lg font-semibold mb-4">间距</h3>
+                <h3 className="text-lg font-semibold mb-4">Gap</h3>
                 <div className="flex gap-2">
                   {[0, 4, 8, 12, 16].map((g) => (
                     <button
@@ -245,7 +245,7 @@ const Collage = () => {
 
               {/* Background Color */}
               <div className="glass-card p-6">
-                <h3 className="text-lg font-semibold mb-4">背景颜色</h3>
+                <h3 className="text-lg font-semibold mb-4">Background Color</h3>
                 <div className="flex gap-2">
                   {["#1a1a2e", "#ffffff", "#000000", "#2d3436", "#6c5ce7"].map((color) => (
                     <button
@@ -263,7 +263,7 @@ const Collage = () => {
               {/* Actions */}
               <Button variant="gradient" onClick={handleDownload} className="w-full">
                 <Download className="w-4 h-4 mr-2" />
-                下载拼图
+                Download Collage
               </Button>
             </div>
           </div>
@@ -278,7 +278,7 @@ const Collage = () => {
                   onClick={() => setActiveSlot(null)}
                   className="w-full mt-4"
                 >
-                  取消
+                  Cancel
                 </Button>
               </div>
             </div>

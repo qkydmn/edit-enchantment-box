@@ -26,14 +26,14 @@ const defaultFilters: FilterValues = {
 };
 
 const presetFilters = [
-  { name: "原图", values: defaultFilters },
-  { name: "暖阳", values: { ...defaultFilters, saturate: 130, brightness: 110, sepia: 20 } },
-  { name: "冷调", values: { ...defaultFilters, saturate: 80, hueRotate: 180, brightness: 95 } },
-  { name: "复古", values: { ...defaultFilters, sepia: 60, contrast: 110, saturate: 80 } },
-  { name: "黑白", values: { ...defaultFilters, grayscale: 100, contrast: 120 } },
-  { name: "鲜艳", values: { ...defaultFilters, saturate: 150, contrast: 110 } },
-  { name: "梦幻", values: { ...defaultFilters, blur: 1, brightness: 110, saturate: 90 } },
-  { name: "胶片", values: { ...defaultFilters, contrast: 90, saturate: 85, sepia: 15 } },
+  { name: "Original", values: defaultFilters },
+  { name: "Warm", values: { ...defaultFilters, saturate: 130, brightness: 110, sepia: 20 } },
+  { name: "Cool", values: { ...defaultFilters, saturate: 80, hueRotate: 180, brightness: 95 } },
+  { name: "Vintage", values: { ...defaultFilters, sepia: 60, contrast: 110, saturate: 80 } },
+  { name: "B&W", values: { ...defaultFilters, grayscale: 100, contrast: 120 } },
+  { name: "Vibrant", values: { ...defaultFilters, saturate: 150, contrast: 110 } },
+  { name: "Dreamy", values: { ...defaultFilters, blur: 1, brightness: 110, saturate: 90 } },
+  { name: "Film", values: { ...defaultFilters, contrast: 90, saturate: 85, sepia: 15 } },
 ];
 
 const Filters = () => {
@@ -88,10 +88,10 @@ const Filters = () => {
   };
 
   const filterControls = [
-    { name: "亮度", key: "brightness" as const, icon: Sun, min: 0, max: 200 },
-    { name: "对比度", key: "contrast" as const, icon: Contrast, min: 0, max: 200 },
-    { name: "饱和度", key: "saturate" as const, icon: Droplets, min: 0, max: 200 },
-    { name: "色相", key: "hueRotate" as const, icon: Palette, min: 0, max: 360 },
+    { name: "Brightness", key: "brightness" as const, icon: Sun, min: 0, max: 200 },
+    { name: "Contrast", key: "contrast" as const, icon: Contrast, min: 0, max: 200 },
+    { name: "Saturation", key: "saturate" as const, icon: Droplets, min: 0, max: 200 },
+    { name: "Hue", key: "hueRotate" as const, icon: Palette, min: 0, max: 360 },
   ];
 
   return (
@@ -101,8 +101,8 @@ const Filters = () => {
       <main className="pt-28 pb-12 px-6">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12">
-            <h1 className="text-4xl font-bold mb-4 gradient-text">滤镜效果</h1>
-            <p className="text-muted-foreground text-lg">调整参数或选择预设，创造独特的视觉效果</p>
+            <h1 className="text-4xl font-bold mb-4 gradient-text">Filters</h1>
+            <p className="text-muted-foreground text-lg">Adjust parameters or choose presets to create unique visual effects</p>
           </div>
 
           {!image ? (
@@ -124,7 +124,7 @@ const Filters = () => {
                 
                 {/* Preset Filters */}
                 <div className="mt-6">
-                  <h3 className="text-sm font-medium text-muted-foreground mb-3">预设滤镜</h3>
+                  <h3 className="text-sm font-medium text-muted-foreground mb-3">Preset Filters</h3>
                   <div className="flex gap-3 overflow-x-auto pb-2">
                     {presetFilters.map((preset) => (
                       <button
@@ -159,7 +159,7 @@ const Filters = () => {
               {/* Controls */}
               <div className="space-y-6">
                 <div className="glass-card p-6">
-                  <h3 className="text-lg font-semibold mb-6">调整参数</h3>
+                  <h3 className="text-lg font-semibold mb-6">Adjustments</h3>
                   
                   <div className="space-y-6">
                     {filterControls.map((control) => {
@@ -196,11 +196,11 @@ const Filters = () => {
                 <div className="flex gap-3">
                   <Button variant="outline" onClick={handleReset} className="flex-1">
                     <RotateCcw className="w-4 h-4 mr-2" />
-                    重置
+                    Reset
                   </Button>
                   <Button variant="gradient" onClick={handleDownload} className="flex-1">
                     <Download className="w-4 h-4 mr-2" />
-                    下载
+                    Download
                   </Button>
                 </div>
 
@@ -209,7 +209,7 @@ const Filters = () => {
                   onClick={() => setImage(null)}
                   className="w-full text-muted-foreground"
                 >
-                  更换图片
+                  Change Image
                 </Button>
               </div>
             </div>

@@ -124,8 +124,8 @@ const Stickers = () => {
       <main className="pt-28 pb-12 px-6">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12">
-            <h1 className="text-4xl font-bold mb-4 gradient-text">贴纸</h1>
-            <p className="text-muted-foreground text-lg">添加有趣的贴纸，让照片更生动</p>
+            <h1 className="text-4xl font-bold mb-4 gradient-text">Stickers</h1>
+            <p className="text-muted-foreground text-lg">Add fun stickers to make your photos pop</p>
           </div>
 
           {!image ? (
@@ -178,7 +178,7 @@ const Stickers = () => {
                 <div className="mt-4 flex items-center gap-4 text-sm text-muted-foreground justify-center">
                   <div className="flex items-center gap-2">
                     <Move className="w-4 h-4" />
-                    <span>拖拽移动贴纸</span>
+                    <span>Drag to move stickers</span>
                   </div>
                 </div>
               </div>
@@ -187,7 +187,7 @@ const Stickers = () => {
               <div className="space-y-6">
                 {/* Sticker Picker */}
                 <div className="glass-card p-6">
-                  <h3 className="text-lg font-semibold mb-4">选择贴纸</h3>
+                  <h3 className="text-lg font-semibold mb-4">Choose Stickers</h3>
                   <div className="grid grid-cols-6 gap-2 max-h-64 overflow-y-auto">
                     {stickerEmojis.map((emoji) => (
                       <button
@@ -205,7 +205,7 @@ const Stickers = () => {
                 {selectedStickerData && (
                   <div className="glass-card p-6">
                     <div className="flex items-center justify-between mb-4">
-                      <h3 className="text-lg font-semibold">编辑贴纸</h3>
+                      <h3 className="text-lg font-semibold">Edit Sticker</h3>
                       <button
                         onClick={() => deleteSticker(selectedStickerData.id)}
                         className="p-2 rounded-lg hover:bg-destructive/20 text-destructive transition-colors"
@@ -217,7 +217,7 @@ const Stickers = () => {
                     <div className="space-y-4">
                       {/* Scale */}
                       <div>
-                        <label className="text-sm text-muted-foreground mb-2 block">大小</label>
+                        <label className="text-sm text-muted-foreground mb-2 block">Size</label>
                         <div className="flex items-center gap-2">
                           <Button
                             variant="outline"
@@ -249,7 +249,7 @@ const Stickers = () => {
 
                       {/* Rotation */}
                       <div>
-                        <label className="text-sm text-muted-foreground mb-2 block">旋转</label>
+                        <label className="text-sm text-muted-foreground mb-2 block">Rotation</label>
                         <div className="flex items-center gap-2">
                           <Button
                             variant="outline"
@@ -285,7 +285,7 @@ const Stickers = () => {
                 {/* Actions */}
                 <Button variant="gradient" onClick={handleDownload} className="w-full">
                   <Download className="w-4 h-4 mr-2" />
-                  下载图片
+                  Download Image
                 </Button>
 
                 <Button
@@ -297,7 +297,7 @@ const Stickers = () => {
                   }}
                   className="w-full text-muted-foreground"
                 >
-                  更换图片
+                  Change Image
                 </Button>
               </div>
             </div>

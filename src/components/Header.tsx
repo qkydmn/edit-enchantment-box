@@ -5,10 +5,10 @@ const Header = () => {
   const location = useLocation();
   
   const navItems = [
-    { name: "首页", href: "/", icon: Sparkles },
-    { name: "滤镜", href: "/filters", icon: Palette },
-    { name: "拼图", href: "/collage", icon: LayoutGrid },
-    { name: "贴纸", href: "/stickers", icon: Sticker },
+    { name: "Home", href: "/", icon: Sparkles },
+    { name: "Filters", href: "/filters", icon: Palette },
+    { name: "Collage", href: "/collage", icon: LayoutGrid },
+    { name: "Stickers", href: "/stickers", icon: Sticker },
   ];
 
   return (
