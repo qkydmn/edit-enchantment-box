@@ -64,7 +64,7 @@ const Index = () => {
             <div className="glass-card p-4 glow-effect animate-float">
               <img 
                 src={heroImage} 
-                alt="PixelMagic photo editing showcase" 
+                alt="PixelMagic 图片编辑展示" 
                 className="w-full rounded-xl shadow-2xl"
               />
             </div>
