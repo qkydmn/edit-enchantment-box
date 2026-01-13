@@ -1,6 +1,7 @@
 import { Palette, LayoutGrid, Sticker, Sparkles } from "lucide-react";
 import Header from "@/components/Header";
 import FeatureCard from "@/components/FeatureCard";
+import heroImage from "@/assets/hero-image.png";
 
 const Index = () => {
   const features = [
@@ -61,16 +62,11 @@ const Index = () => {
           {/* Floating preview mockup */}
           <div className="relative max-w-4xl mx-auto">
             <div className="glass-card p-4 glow-effect animate-float">
-              <div className="aspect-video rounded-xl bg-gradient-to-br from-secondary to-card flex items-center justify-center">
-                <div className="grid grid-cols-3 gap-4 p-8">
-                  {[1, 2, 3].map((i) => (
-                    <div
-                      key={i}
-                      className="aspect-square rounded-lg bg-gradient-to-br from-primary/30 to-accent/30 animate-pulse"
-                    />
-                  ))}
-                </div>
-              </div>
+              <img 
+                src={heroImage} 
+                alt="PixelMagic 图片编辑展示" 
+                className="w-full rounded-xl shadow-2xl"
+              />
             </div>
           </div>
         </div>
